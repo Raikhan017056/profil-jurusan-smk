@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <title>Dashboard - SMK Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script src="auth.js"></script>
+    <nav>
+        <div class="logo">SMK PORTAL</div>
+        <div class="nav-links">
+            <a href="dashboard.html">Beranda</a>
+            <a href="mplb.html">Jurusan MPLB</a>
+            <a href="dkv.html">Jurusan DKV</a>
+            <span id="adminLink"></span>
+            <a href="#" onclick="logout()" class="btn-logout">Logout</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Selamat Datang di Portal Keahlian</h1>
+        <p>Silahkan pilih jurusan untuk melihat informasi detail kurikulum dan prospek kerja.</p>
+        
+        <div class="grid">
+            <div class="card">
+                <h3>Manajemen Perkantoran (MPLB)</h3>
+                <p>Mempelajari tata kelola administrasi modern dan layanan bisnis digital.</p>
+                <button onclick="window.location.href='mplb.html'" style="margin-top:10px;">Lihat Detail</button>
+            </div>
+            <div class="card">
+                <h3>Desain Komunikasi Visual (DKV)</h3>
+                <p>Eksplorasi kreativitas melalui media visual, fotografi, dan desain digital.</p>
+                <button onclick="window.location.href='dkv.html'" style="margin-top:10px;">Lihat Detail</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        if(sessionStorage.getItem('role') === 'admin') {
+            document.getElementById('adminLink').innerHTML = '<a href="admin.html" style="color:orange">Panel Admin</a>';
+        }
+    </script>
+</body>
+</html>

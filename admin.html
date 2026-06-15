@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script src="auth.js"></script>
+    <script>checkAdmin();</script> <!-- Proteksi tambahan -->
+
+    <nav>
+        <div class="logo">ADMIN PANEL</div>
+        <div class="nav-links">
+            <a href="dashboard.html">Dashboard</a>
+            <a href="#" onclick="logout()" class="btn-logout">Logout</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h2>Manajemen Data Jurusan</h2>
+        <p>Hanya Admin yang dapat melihat halaman ini.</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nama Jurusan</th>
+                    <th>Jumlah Siswa</th>
+                    <th>Status</th>
+                    <th>Aksi</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>MPLB</td>
+                    <td>120</td>
+                    <td>Aktif</td>
+                    <td><button style="width:auto; padding: 5px 10px;">Edit</button></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>DKV</td>
+                    <td>105</td>
+                    <td>Aktif</td>
+                    <td><button style="width:auto; padding: 5px 10px;">Edit</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

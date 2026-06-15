@@ -1,0 +1,37 @@
+:root {
+    --primary: #2563eb;
+    --secondary: #64748b;
+    --accent: #f59e0b;
+    --dark: #1e293b;
+    --light: #f8fafc;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+
+body { background: var(--light); color: var(--dark); line-height: 1.6; }
+
+/* Login Box */
+.login-body { height: 100vh; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #2563eb, #7c3aed); }
+.login-card { background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.2); width: 350px; }
+.login-card h2 { text-align: center; margin-bottom: 1.5rem; color: var(--dark); }
+
+input, select { width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #ddd; border-radius: 6px; }
+button { width: 100%; padding: 12px; background: var(--primary); color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: bold; transition: 0.3s; }
+button:hover { background: #1d4ed8; }
+
+/* Navbar */
+nav { background: white; padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 100; }
+.logo { font-size: 1.5rem; font-weight: bold; color: var(--primary); }
+.nav-links a { margin-left: 20px; text-decoration: none; color: var(--dark); font-weight: 500; }
+.btn-logout { background: #ef4444; padding: 5px 15px; border-radius: 5px; color: white !important; }
+
+/* Layout Halaman */
+.container { max-width: 1100px; margin: 2rem auto; padding: 0 20px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 2rem; }
+.card { background: white; padding: 1.5rem; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+.card h3 { color: var(--primary); margin-bottom: 10px; border-bottom: 2px solid #eee; padding-bottom: 5px; }
+
+/* Table for Admin */
+table { width: 100%; border-collapse: collapse; margin-top: 20px; background: white; }
+table, th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+th { background: #f4f4f4; }

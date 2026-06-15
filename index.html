@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <title>Login - Portal Jurusan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="login-body">
+    <div class="login-card">
+        <h2>PORTAL SMK</h2>
+        <form id="loginForm">
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <select id="role">
+                <option value="user">Umum (User)</option>
+                <option value="admin">Administrator</option>
+            </select>
+            <button type="submit">MASUK</button>
+            <p id="msg" style="color:red; font-size: 0.8rem; margin-top:10px; display:none;">Login Gagal! Periksa kembali.</p>
+        </form>
+        <p style="font-size: 0.7rem; margin-top: 15px; color: #666;">
+            Admin: admin | admin123 <br>
+            Umum: user | user123
+        </p>
+    </div>
+
+    <script>
+        document.getElementById('loginForm').onsubmit = function(e) {
+            e.preventDefault();
+            const u = document.getElementById('username').value;
+            const p = document.getElementById('password').value;
+            const r = document.getElementById('role').value;
+
+            if((r === 'admin' && u === 'admin' && p === 'admin123') || 
+               (r === 'user' && u === 'user' && p === 'user123')) {
+                sessionStorage.setItem('isLoggedIn', 'true');
+                sessionStorage.setItem('role', r);
+                window.location.href = 'dashboard.html';
+            } else {
+                document.getElementById('msg').style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
